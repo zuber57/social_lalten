@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      .animate-slide {
+        display: flex;
+        width: max-content;
+        animation: slide 20s linear infinite;
+      }
+    </style>
+    <link rel="stylesheet" href="index.css" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- Tailwind Custom Config for CDN -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              outfit: ["Outfit", "sans-serif"],
+              quiny: ["Quiny", "serif"], // Add Quiny
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="font-outfit">
+    <nav class="bg-white p-4">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="text-white text-lg font-semibold">
+          <img
+            src="https://sociallalten.in/Assets/Logo.svg"
+            alt="Logo"
+            class="w-[90px] object-cover"
+          />
+        </div>
+        <div class="space-x-16 uppercase">
+          <a href="#" class="text-[#631dff] font-bold">Home</a>
+          <a href="#" class="text-[#631dff] font-bold">About us</a>
+          <a href="#" class="text-[#631dff] font-bold">what we do</a>
+        </div>
+        <div>
+          <button
+            class="bg-[#631dff] font-bold text-[#ff9421] uppercase rounded-full px-4 py-2 rounded hover:bg-blue-600"
+          >
+            Let's begin
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section
+      class="relative flex items-center justify-center w-full h-[870px] bg-[url('https://sociallalten.in/Assets/herosection-bg.svg')] bg-cover bg-center z-10"
+    >
+      <div class="relative w-full h-full p-16 flex items-center justify-center">
+        <!-- Wrapper for image mask -->
+        <div class="relative z-30 w-full py-16">
+          <!-- Video masked inside image -->
+          <!-- <video
+            class="w-full h-full object-contain"
+            autoplay
+            controls
+            muted
+            loop
+            playsinline
+            style="
+              -webkit-mask-image: url('https://sociallalten.in/Assets/herosection-video-bg.svg');
+              -webkit-mask-repeat: no-repeat;
+              -webkit-mask-position: center;
+              -webkit-mask-size: contain;
+              mask-image: url('https://sociallalten.in/Assets/herosection-video-bg.svg');
+              mask-repeat: no-repeat;
+              mask-position: center;
+              mask-size: contain;
+            "
+          >
+            <source src="https://sociallalten.in/Assets/webbanner.mp4" type="video/mp4" />
+          </video> -->
+          <div class="relative w-screen max-w-full border-4 border-purple-600 rounded-3xl overflow-hidden bg-gray-100">
+  
+  <!-- Video Element -->
+  <video id="videoPlayer" class="w-full h-auto" autoplay muted loop playsinline>
+    <source src="https://sociallalten.in/Assets/Showreel.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Center Play/Pause Button -->
+  <button id="centerPlayPauseBtn"
+    class="absolute inset-0 flex items-center justify-center text-purple-700 text-6xl bg-black/30 hover:bg-black/40 transition-opacity duration-300">
+    &#10074;&#10074; <!-- Pause symbol -->
+  </button>
+
+  <!-- Bottom Control Bar -->
+  <div class="absolute bottom-0 left-0 right-0 bg-orange-500 text-purple-900 flex items-center justify-between gap-2 px-4 py-2">
+    <!-- Seek Bar -->
+    <input id="seekBar" type="range" value="0" class="w-full h-1 accent-purple-700">
+    <!-- Mute Button -->
+    <button id="muteBtn" class="text-2xl hover:text-purple-700">&#128266;</button>
+    <!-- Volume Control -->
+    <input id="volumeBar" type="range" min="0" max="1" step="0.1" value="1" class="w-24 h-1 accent-purple-700">
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div
+        class="bg-[url('https://sociallalten.in/Assets/herosection-bg-1.svg')] flex flex-col items-center gap-14 text-center flex-col justify-center bg-cover bg-center p-6 h-[400px]"
+      >
+        <h3 class="text-[#631dff] text-5xl font-sans font-bold">
+          ABOUT SOCIAL LALTEN
+        </h3>
+        <p
+          class="text-[#631dff] max-w-4xl mx-auto font-outfit text-center text-2xl font-normal"
+        >
+          At Social Lalten we breathe life into your brand’s online presence.
+          With a passion for digital marketing and a flair for creativity, we
+          are here to revolutionize the way you connect with your audience in
+          the vast digital landscape.
+        </p>
+      </div>
+    </section>
+    <section class="relative w-full h-screen overflow-hidden">
+      <!-- Poster Fallback -->
+      <img
+        src="https://sociallalten.in/Assets/webbanner.svg"
+        alt="poster"
+        class="absolute top-0 left-0 w-full h-full object-cover object-center"
+      />
+
+      <!-- Video -->
+      <video
+        class="absolute top-0 left-0 w-full h-full object-cover object-center"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source
+          src="https://sociallalten.in/Assets/webbanner.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </section>
+    <section
+      class="bg-[url('https://sociallalten.in/Assets/services-bg.svg')] bg-cover bg-center h-[600px] p-6 flex flex-col items-center justify-center text-center p-6 gap-10 relative"
+    >
+      <div class="w-full h-full absolute top-0 left-0 z-20">
+        <img
+          src="https://sociallalten.in/Assets/vector3.svg"
+          alt="overlay"
+          class="w-full h-full object-cover object-center"
+        />
+      </div>
+      <h3 class="text-white text-5xl font-sans font-bold z-30">WHAT WE DO</h3>
+
+      <div class="grid w-full pt-10 grid-cols-4 gap-10">
+        <div
+          class="flex w-full flex-col border-[3px] p-4 border-white rounded-[20px] h-[400px]"
+        >
+          <div class="flex items-center">
+            <h3 class="text-3xl font-bold text-white uppercase">
+              social media management
+            </h3>
+            <img
+              src="https://sociallalten.in/Assets/copyIcon.svg"
+              alt="line"
+              class="w-6 h-6"
+            />
+          </div>
+        </div>
+        <div
+          class="flex w-full flex-col border-[3px] p-4 border-white rounded-[20px] h-[400px]"
+        >
+          <div class="flex items-center justify-center">
+            <h3 class="text-3xl font-bold text-white text-left uppercase">
+              <span>ui/ux</span><br /><span>development</span>
+            </h3>
+          </div>
+        </div>
+        <div
+          class="flex w-full flex-col border-[3px] p-4 border-white rounded-[20px] h-[400px]"
+        >
+          <div class="flex items-center justify-center">
+            <h3 class="text-3xl font-bold text-white text-left uppercase">
+              <span>Branding&</span><br /><span>packaging</span>
+            </h3>
+            <img
+              src="https://sociallalten.in/Assets/copyIcon.svg"
+              alt="line"
+              class="w-6 h-6"
+            />
+          </div>
+        </div>
+        <div
+          class="flex w-full flex-col border-[3px] p-4 border-white rounded-[20px] h-[400px]"
+        >
+          <div class="flex items-center justify-center">
+            <h3 class="text-3xl font-bold text-white text-left uppercase">
+              <span>shot and</span><br /><span>ad films</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="bg-white py-16">
+      <div class="container mx-auto overflow-hidden relative">
+        <!-- Slider Wrapper -->
+        <div class="flex animate-slide space-x-12">
+          <!-- Logos (equal size using h-14 w-auto + object-contain) -->
+          <img
+            src="https://sociallalten.in/Assets/logo-1.svg"
+            alt="logo1"
+            class="h-14 w-auto object-contain"
+          />
+          <img
+            src="https://sociallalten.in/Assets/logo-2.svg"
+            alt="logo2"
+            class="h-14 w-auto object-contain"
+          />
+          <img
+            src="https://sociallalten.in/Assets/logo-3.svg"
+            alt="logo3"
+            class="h-14 w-auto object-contain"
+          />
+          <img
+            src="https://sociallalten.in/Assets/logo-4.svg"
+            alt="logo4"
+            class="h-14 w-auto object-contain"
+          />
+          <img
+            src="https://sociallalten.in/Assets/logo-5.svg"
+            alt="logo5"
+            class="h-14 w-auto object-contain"
+          />
+          <!-- Duplicate logos for infinite scroll effect -->
+          <img
+            src="https://sociallalten.in/Assets/logo-1.svg"
+            alt="logo1"
+            class="h-14 w-auto object-contain"
+          />
+          <img
+            src="https://sociallalten.in/Assets/logo-2.svg"
+            alt="logo2"
+            class="h-14 w-auto object-contain"
+          />
+          <img
+            src="https://sociallalten.in/Assets/logo-3.svg"
+            alt="logo3"
+            class="h-14 w-auto object-contain"
+          />
+          <img
+            src="https://sociallalten.in/Assets/logo-4.svg"
+            alt="logo4"
+            class="h-14 w-auto object-contain"
+          />
+          <img
+            src="https://sociallalten.in/Assets/logo-5.svg"
+            alt="logo5"
+            class="h-14 w-auto object-contain"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section class="py-12">
+      <div class="w-full flex flex-col">
+        <!-- Section Title -->
+        <div class="flex items-center justify-center gap-4 mb-8">
+          <h3 class="text-3xl text-[#631dff] uppercase font-bold text-center">
+            Follow us
+          </h3>
+          <img
+            src="https://sociallalten.in/Assets/instagram.svg"
+            alt="instagram"
+            class="w-8 object-contain"
+          />
+        </div>
+
+        <!-- Slick Slider -->
+        <div class="slider flex space-x-2">
+          <div class="px-2">
+            <div
+              class="bg-[#ff9421] text-white rounded-2xl shadow-md h-96 flex items-center justify-center text-lg font-semibold"
+            >
+              Post 1
+            </div>
+          </div>
+          <div class="px-2">
+            <div
+              class="bg-[#ff9421] text-white rounded-2xl shadow-md h-96 flex items-center justify-center text-lg font-semibold"
+            >
+              Post 2
+            </div>
+          </div>
+          <div class="px-2">
+            <div
+              class="bg-[#ff9421] text-white rounded-2xl shadow-md h-96 flex items-center justify-center text-lg font-semibold"
+            >
+              Post 2
+            </div>
+          </div>
+          <div class="px-2">
+            <div
+              class="bg-[#ff9421] text-white rounded-2xl shadow-md h-96 flex items-center justify-center text-lg font-semibold"
+            >
+              Post 2
+            </div>
+          </div>
+          <div class="px-2">
+            <div
+              class="bg-[#ff9421] text-white rounded-2xl shadow-md h-96 flex items-center justify-center text-lg font-semibold"
+            >
+              Post 2
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="bg-white bg-cover bg-center h-[600px] p-6 flex flex-col items-center justify-center text-center p-6 gap-10 relative"
+    >
+      <div class="w-full h-full absolute top-0 left-0 z-20">
+        <img
+          src="https://sociallalten.in/Assets/vector3.svg"
+          alt="overlay"
+          class="w-full h-full object-cover object-center"
+        />
+      </div>
+      <h3 class="text-[#631dff] text-3xl uppercase font-sans font-bold z-30">
+        Built by three . made for many .
+      </h3>
+
+      <div class="grid w-full max-w-[80%] mx-auto pt-10 grid-cols-3 gap-10">
+        <div
+          class="flex w-full flex-col border-[3px] p-4 border-red-500 rounded-[20px] h-[400px]"
+        >
+          <div class="flex items-center justify-center">
+            <h3 class="text-3xl font-bold text-white text-left uppercase">
+              <span>ui/ux</span><br /><span>development</span>
+            </h3>
+          </div>
+        </div>
+        <div
+          class="flex w-full flex-col border-[3px] p-4 border-red-500 rounded-[20px] h-[400px]"
+        >
+          <div class="flex items-center justify-center">
+            <h3 class="text-3xl font-bold text-white text-left uppercase">
+              <span>Branding&</span><br /><span>packaging</span>
+            </h3>
+            <img
+              src="https://sociallalten.in/Assets/copyIcon.svg"
+              alt="line"
+              class="w-6 h-6"
+            />
+          </div>
+        </div>
+        <div
+          class="flex w-full flex-col border-[3px] p-4 border-red-500 rounded-[20px] h-[400px]"
+        >
+          <div class="flex items-center justify-center">
+            <h3 class="text-3xl font-bold text-white text-left uppercase">
+              <span>shot and</span><br /><span>ad films</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="w-full">
+      <div
+        class="bg-[linear-gradient(45deg,#ff9321_0%,#631dff_100%)] text-white"
+      >
+        <div
+          class="container mx-auto w-full max-w-[80%] flex flex-col md:flex-row justify-between items-start md:items-center py-20 px-6 gap-6"
+        >
+          <!-- Email -->
+          <div class="flex flex-col">
+            <span class="font-semibold">Email</span>
+            <span class="text-sm">sociallalten@gmail.com</span>
+          </div>
+
+          <!-- Phone -->
+          <div class="flex flex-col">
+            <span class="font-semibold">Phone No</span>
+            <span class="text-sm">+91 8826759596</span>
+            <div class="flex gap-3 mt-2">
+              <a href="#" class="bg-white p-1 rounded-md"
+                ><img
+                  src="https://sociallalten.in/Assets/instagram.svg"
+                  alt="Instagram"
+                  class="w-5 h-5"
+              /></a>
+              <a href="#"
+                ><img
+                  src="https://sociallalten.in/Assets/linkedin.svg"
+                  alt="LinkedIn"
+                  class="w-5 h-5"
+              /></a>
+              <a href="#"
+                ><img
+                  src="https://sociallalten.in/Assets/facebook.svg"
+                  alt="Facebook"
+                  class="w-5 h-5"
+              /></a>
+            </div>
+          </div>
+
+          <!-- Address -->
+          <div class="flex flex-col">
+            <span class="font-semibold">Address</span>
+            <span class="text-sm">
+              E49/5, Pocket D, Okhla Phase II, Okhla Industrial Estate, New
+              Delhi 110020
+            </span>
+          </div>
+        </div>
+
+        <!-- Bottom copyright bar -->
+        <div class="bg-[#3b0fa3] text-white text-center py-3 text-sm">
+          © 2025 SocialLalten.com | All Rights Reserved
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".slider").slick({
+          infinite: true, // loop forever
+          centerMode: true, // keeps active card centered
+          centerPadding: "90px", // half card visible on sides
+          slidesToShow: 4, // 2 full cards visible
+          autoplay: true,
+          autoplaySpeed: 0, // 👈 continuous scroll (no delay)
+          speed: 3000, // 👈 scroll speed (bigger = slower)
+          cssEase: "linear", // 👈 smooth linear scroll
+          arrows: false, // remove arrows if you want
+          dots: false, // remove dots if not needed
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+                centerPadding: "40px",
+              },
+            },
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                centerPadding: "60px",
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                centerPadding: "30px",
+              },
+            },
+          ],
+        });
+      });
+    </script>
+   <script>
+  const video = document.getElementById("videoPlayer");
+  const centerBtn = document.getElementById("centerPlayPauseBtn");
+  const muteBtn = document.getElementById("muteBtn");
+  const seekBar = document.getElementById("seekBar");
+  const volumeBar = document.getElementById("volumeBar");
+
+  // Autoplay on load
+  window.addEventListener("load", () => {
+    video.play();
+    centerBtn.classList.add("opacity-0", "pointer-events-none");
+  });
+
+  // Center play/pause toggle
+  centerBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.play();
+      centerBtn.innerHTML = "&#10074;&#10074;";
+      centerBtn.classList.add("opacity-0", "pointer-events-none");
+    } else {
+      video.pause();
+      centerBtn.innerHTML = "&#9658;";
+    }
+  });
+
+  // Show play button when video is paused
+  video.addEventListener("pause", () => {
+    centerBtn.classList.remove("opacity-0", "pointer-events-none");
+  });
+
+  // Hide button again on play
+  video.addEventListener("play", () => {
+    centerBtn.classList.add("opacity-0", "pointer-events-none");
+  });
+
+  // Sync seek bar
+  video.addEventListener("timeupdate", () => {
+    seekBar.value = (100 / video.duration) * video.currentTime;
+  });
+
+  // Seek manually
+  seekBar.addEventListener("input", () => {
+    video.currentTime = video.duration * (seekBar.value / 100);
+  });
+
+  // Mute toggle
+  muteBtn.addEventListener("click", () => {
+    video.muted = !video.muted;
+    muteBtn.innerHTML = video.muted ? "&#128263;" : "&#128266;";
+  });
+
+  // Volume slider
+  volumeBar.addEventListener("input", () => {
+    video.volume = volumeBar.value;
+  });
+</script>
+
+
+    <script src="index.js"></script>
+  </body>
+</html>

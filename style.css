@@ -1,0 +1,6 @@
+.slick-slide {
+  margin: 0 10px; /* gap between slides */
+}
+.slick-list {
+  margin: 0 -10px; /* prevent overflow */
+}
