@@ -70,12 +70,15 @@
             class="bg-[#631dff] font-bold text-[#ff9421] uppercase rounded-full px-4 py-2 rounded hover:bg-blue-600"
           >
             Let's begin
+            <span
+              ><img src="https://sociallalten.in/images/arrow-b.png"
+            /></span>
           </button>
         </div>
       </div>
     </nav>
     <section
-      class="relative flex items-center justify-center w-full h-[870px] bg-[url('https://sociallalten.in/Assets/herosection-bg.svg')] bg-cover bg-center z-10"
+      class="relative flex items-center justify-center w-full h-[870px] bg-[url('/Assets/herosection-bg.png')] bg-cover bg-center z-10"
     >
       <div class="relative w-full h-full p-16 flex items-center justify-center">
         <!-- Wrapper for image mask -->
@@ -101,37 +104,146 @@
           >
             <source src="https://sociallalten.in/Assets/webbanner.mp4" type="video/mp4" />
           </video> -->
-          <div class="relative w-screen max-w-full border-4 border-purple-600 rounded-3xl overflow-hidden bg-gray-100">
-  
-  <!-- Video Element -->
-  <video id="videoPlayer" class="w-full h-auto" autoplay muted loop playsinline>
-    <source src="https://sociallalten.in/Assets/Showreel.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+          <div
+            class="relative w-screen max-w-full border-4 border-purple-600 rounded-3xl overflow-hidden bg-gray-100"
+          >
+            <!-- Video Element -->
+            <video
+              id="videoPlayer"
+              class="w-full h-auto"
+              autoplay
+              loop
+              playsinline
+            >
+              <source
+                src="https://sociallalten.in/Assets/Showreel.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
 
-  <!-- Center Play/Pause Button -->
-  <button id="centerPlayPauseBtn"
-    class="absolute inset-0 flex items-center justify-center text-purple-700 text-6xl bg-black/30 hover:bg-black/40 transition-opacity duration-300">
-    &#10074;&#10074; <!-- Pause symbol -->
-  </button>
+            <!-- Center Play/Pause Button -->
+            <button
+              id="centerPlayPauseBtn"
+              class="absolute inset-0 flex items-center justify-center text-purple-700 text-6xl bg-black/30 hover:bg-black/40 transition-opacity duration-300"
+            >
+              &#10074;&#10074;
+              <!-- Pause symbol -->
+            </button>
 
-  <!-- Bottom Control Bar -->
-  <div class="absolute bottom-0 left-0 right-0 bg-orange-500 text-purple-900 flex items-center justify-between gap-2 px-4 py-2">
-    <!-- Seek Bar -->
-    <input id="seekBar" type="range" value="0" class="w-full h-1 accent-purple-700">
-    <!-- Mute Button -->
-    <button id="muteBtn" class="text-2xl hover:text-purple-700">&#128266;</button>
-    <!-- Volume Control -->
-    <input id="volumeBar" type="range" min="0" max="1" step="0.1" value="1" class="w-24 h-1 accent-purple-700">
-  </div>
-</div>
+            <!-- Bottom Control Bar -->
+            <div
+              class="absolute bottom-0 w-full left-0 right-0 bg-orange-500 text-purple-900 flex items-center justify-between gap-2 px-4 py-3"
+            >
+              <div class="w-full max-w-[90%] mx-auto flex items-center gap-4">
+                <div class="flex items-center gap-6">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-play-icon lucide-play"
+                  >
+                    <path
+                      d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
+                    />
+                  </svg>
+
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-skip-back-icon lucide-skip-back"
+                  >
+                    <path
+                      d="M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z"
+                    />
+                    <path d="M3 20V4" />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-skip-forward-icon lucide-skip-forward"
+                  >
+                    <path d="M21 4v16" />
+                    <path
+                      d="M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z"
+                    />
+                  </svg>
+                </div>
+                <input
+                  id="seekBar"
+                  type="range"
+                  value="0"
+                  class="w-full h-1 accent-purple-700"
+                />
+                <button id="muteBtn" class="text-purple-700">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-volume2-icon lucide-volume-2"
+                  >
+                    <path
+                      d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"
+                    />
+                    <path d="M16 9a5 5 0 0 1 0 6" />
+                    <path d="M19.364 18.364a9 9 0 0 0 0-12.728" />
+                  </svg>
+                </button>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-settings-icon lucide-settings"
+                >
+                  <path
+                    d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"
+                  />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </div>
+
+              <!-- <input id="volumeBar" type="range" min="0" max="1" step="0.1" value="1" class="w-24 h-1 accent-purple-700"> -->
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section>
       <div
-        class="bg-[url('https://sociallalten.in/Assets/herosection-bg-1.svg')] flex flex-col items-center gap-14 text-center flex-col justify-center bg-cover bg-center p-6 h-[400px]"
+        class="bg-[url('/Assets/vector-1.png')] flex flex-col items-center gap-14 text-center flex-col justify-center bg-contain bg-center p-6 h-[400px]"
       >
         <h3 class="text-[#631dff] text-5xl font-sans font-bold">
           ABOUT SOCIAL LALTEN
@@ -170,7 +282,7 @@
       </video>
     </section>
     <section
-      class="bg-[url('https://sociallalten.in/Assets/services-bg.svg')] bg-cover bg-center h-[600px] p-6 flex flex-col items-center justify-center text-center p-6 gap-10 relative"
+      class="bg-[url('/Assets/whatweDo.png')] bg-cover bg-center h-[600px] p-6 flex flex-col items-center justify-center text-center p-6 gap-10 relative"
     >
       <div class="w-full h-full absolute top-0 left-0 z-20">
         <img
@@ -230,7 +342,9 @@
         </div>
       </div>
     </section>
-    <section class="bg-white py-16">
+    <section
+      class="bg-[url('/Assets/BG.png')] w-full h-auto bg-contain center py-16"
+    >
       <div class="container mx-auto overflow-hidden relative">
         <!-- Slider Wrapper -->
         <div class="flex animate-slide space-x-12">
@@ -346,15 +460,8 @@
     </section>
 
     <section
-      class="bg-white bg-cover bg-center h-[600px] p-6 flex flex-col items-center justify-center text-center p-6 gap-10 relative"
+      class="bg-[url('/Assets/vector-1.png')] bg-cover bg-center h-[600px] p-6 flex flex-col items-center justify-center text-center p-6 gap-10 relative"
     >
-      <div class="w-full h-full absolute top-0 left-0 z-20">
-        <img
-          src="https://sociallalten.in/Assets/vector3.svg"
-          alt="overlay"
-          class="w-full h-full object-cover object-center"
-        />
-      </div>
       <h3 class="text-[#631dff] text-3xl uppercase font-sans font-bold z-30">
         Built by three . made for many .
       </h3>
@@ -493,63 +600,62 @@
         });
       });
     </script>
-   <script>
-  const video = document.getElementById("videoPlayer");
-  const centerBtn = document.getElementById("centerPlayPauseBtn");
-  const muteBtn = document.getElementById("muteBtn");
-  const seekBar = document.getElementById("seekBar");
-  const volumeBar = document.getElementById("volumeBar");
+    <script>
+      const video = document.getElementById("videoPlayer");
+      const centerBtn = document.getElementById("centerPlayPauseBtn");
+      const muteBtn = document.getElementById("muteBtn");
+      const seekBar = document.getElementById("seekBar");
+      const volumeBar = document.getElementById("volumeBar");
 
-  // Autoplay on load
-  window.addEventListener("load", () => {
-    video.play();
-    centerBtn.classList.add("opacity-0", "pointer-events-none");
-  });
+      // Autoplay on load
+      window.addEventListener("load", () => {
+        video.play();
+        centerBtn.classList.add("opacity-0", "pointer-events-none");
+      });
 
-  // Center play/pause toggle
-  centerBtn.addEventListener("click", () => {
-    if (video.paused) {
-      video.play();
-      centerBtn.innerHTML = "&#10074;&#10074;";
-      centerBtn.classList.add("opacity-0", "pointer-events-none");
-    } else {
-      video.pause();
-      centerBtn.innerHTML = "&#9658;";
-    }
-  });
+      // Center play/pause toggle
+      centerBtn.addEventListener("click", () => {
+        if (video.paused) {
+          video.play();
+          centerBtn.innerHTML = "&#10074;&#10074;";
+          centerBtn.classList.add("opacity-0", "pointer-events-none");
+        } else {
+          video.pause();
+          centerBtn.innerHTML = "&#9658;";
+        }
+      });
 
-  // Show play button when video is paused
-  video.addEventListener("pause", () => {
-    centerBtn.classList.remove("opacity-0", "pointer-events-none");
-  });
+      // Show play button when video is paused
+      video.addEventListener("pause", () => {
+        centerBtn.classList.remove("opacity-0", "pointer-events-none");
+      });
 
-  // Hide button again on play
-  video.addEventListener("play", () => {
-    centerBtn.classList.add("opacity-0", "pointer-events-none");
-  });
+      // Hide button again on play
+      video.addEventListener("play", () => {
+        centerBtn.classList.add("opacity-0", "pointer-events-none");
+      });
 
-  // Sync seek bar
-  video.addEventListener("timeupdate", () => {
-    seekBar.value = (100 / video.duration) * video.currentTime;
-  });
+      // Sync seek bar
+      video.addEventListener("timeupdate", () => {
+        seekBar.value = (100 / video.duration) * video.currentTime;
+      });
 
-  // Seek manually
-  seekBar.addEventListener("input", () => {
-    video.currentTime = video.duration * (seekBar.value / 100);
-  });
+      // Seek manually
+      seekBar.addEventListener("input", () => {
+        video.currentTime = video.duration * (seekBar.value / 100);
+      });
 
-  // Mute toggle
-  muteBtn.addEventListener("click", () => {
-    video.muted = !video.muted;
-    muteBtn.innerHTML = video.muted ? "&#128263;" : "&#128266;";
-  });
+      // Mute toggle
+      // muteBtn.addEventListener("click", () => {
+      //   video.muted = !video.muted;
+      //   muteBtn.innerHTML = video.muted ? "&#128263;" : "&#128266;";
+      // });
 
-  // Volume slider
-  volumeBar.addEventListener("input", () => {
-    video.volume = volumeBar.value;
-  });
-</script>
-
+      // Volume slider
+      volumeBar.addEventListener("input", () => {
+        video.volume = volumeBar.value;
+      });
+    </script>
 
     <script src="index.js"></script>
   </body>
