@@ -143,166 +143,166 @@
         </button>
       </div>
     </nav>
-   <section
-  class="relative flex items-center justify-center w-full min-h-[400px] md:min-h-[600px] lg:min-h-[870px] bg-[url('/Assets/herosection-bg.png')] bg-cover bg-center z-10"
->
-  <div class="relative w-full h-full px-4 md:px-10 lg:px-16 flex items-center justify-center">
-    <!-- Wrapper -->
-    <div class="relative z-30 w-full py-8 md:py-12 lg:py-16">
-      <!-- Video Player Container -->
+    <section
+      class="relative flex items-center justify-center w-full min-h-[400px] md:min-h-[600px] lg:min-h-[870px] bg-[url('/Assets/herosection-bg.png')] bg-cover bg-center z-10"
+    >
       <div
-        class="relative w-full border-4 border-purple-600 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100"
+        class="relative w-full h-full px-4 md:px-10 lg:px-16 flex items-center justify-center"
       >
-        <!-- Video Element -->
-        <video
-          id="videoPlayer"
-          class="w-full h-auto"
-          autoplay
-          loop
-          muted
-          playsinline
-        >
-          <source
-            src="https://sociallalten.in/Assets/Showreel.mp4"
-            type="video/mp4"
-          />
-          Your browser does not support the video tag.
-        </video>
+        <!-- Wrapper -->
+        <div class="relative z-30 w-full py-8 md:py-12 lg:py-16">
+          <!-- Video Player Container -->
+          <div
+            class="relative w-full border-4 border-purple-600 rounded-2xl md:rounded-3xl overflow-hidden bg-gray-100"
+          >
+            <!-- Video Element -->
+            <video
+              id="videoPlayer"
+              class="w-full h-auto"
+              autoplay
+              loop
+              muted
+              playsinline
+            >
+              <source
+                src="https://sociallalten.in/Assets/Showreel.mp4"
+                type="video/mp4"
+              />
+              Your browser does not support the video tag.
+            </video>
 
-        <!-- Center Play/Pause Button -->
-        <button
-          id="centerPlayPauseBtn"
-          class="absolute inset-0 flex items-center justify-center text-purple-700 text-4xl md:text-6xl bg-black/30 hover:bg-black/40 transition duration-300"
-        >
-          &#10074;&#10074;
-        </button>
-
-        <!-- Bottom Control Bar -->
-        <div
-          class="absolute bottom-0 w-full bg-orange-500 text-purple-900 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 px-2 sm:px-4 py-2 sm:py-3"
-        >
-          <div class="w-full flex items-center gap-3 sm:gap-6">
-            <!-- Play / Skip Controls -->
-            <div class="flex items-center gap-4 sm:gap-6">
-              <!-- Play -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-play"
-              >
-                <path
-                  d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
-                />
-              </svg>
-
-              <!-- Skip Back -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-skip-back"
-              >
-                <path
-                  d="M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z"
-                />
-                <path d="M3 20V4" />
-              </svg>
-
-              <!-- Skip Forward -->
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-skip-forward"
-              >
-                <path d="M21 4v16" />
-                <path
-                  d="M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z"
-                />
-              </svg>
-            </div>
-
-            <!-- Seekbar -->
-            <input
-              id="seekBar"
-              type="range"
-              value="0"
-              class="w-full h-1 accent-purple-700"
-            />
-
-            <!-- Volume -->
-            <button id="muteBtn" class="text-purple-700">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                class="lucide lucide-volume-2"
-              >
-                <path
-                  d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"
-                />
-                <path d="M16 9a5 5 0 0 1 0 6" />
-                <path d="M19.364 18.364a9 9 0 0 0 0-12.728" />
-              </svg>
+            <!-- Center Play/Pause Button -->
+            <button
+              id="centerPlayPauseBtn"
+              class="absolute inset-0 flex items-center justify-center text-purple-700 text-4xl md:text-6xl bg-black/30 hover:bg-black/40 transition duration-300"
+            >
+              &#10074;&#10074;
             </button>
 
-            <!-- Settings -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              class="lucide lucide-settings"
+            <!-- Bottom Control Bar -->
+            <div
+              class="absolute bottom-0 w-full bg-orange-500 text-purple-900 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 px-2 sm:px-4 py-2 sm:py-3"
             >
-              <path
-                d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"
-              />
-              <circle cx="12" cy="12" r="3" />
-            </svg>
+              <div class="w-full flex items-center gap-3 sm:gap-6">
+                <!-- Play / Skip Controls -->
+                <div class="flex items-center gap-4 sm:gap-6">
+                  <!-- Play -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-play"
+                  >
+                    <path
+                      d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"
+                    />
+                  </svg>
+
+                  <!-- Skip Back -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-skip-back"
+                  >
+                    <path
+                      d="M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z"
+                    />
+                    <path d="M3 20V4" />
+                  </svg>
+
+                  <!-- Skip Forward -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-skip-forward"
+                  >
+                    <path d="M21 4v16" />
+                    <path
+                      d="M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z"
+                    />
+                  </svg>
+                </div>
+
+                <!-- Seekbar -->
+                <input
+                  id="seekBar"
+                  type="range"
+                  value="0"
+                  class="w-full h-1 accent-purple-700"
+                />
+
+                <!-- Volume -->
+                <button id="muteBtn" class="text-purple-700">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="lucide lucide-volume-2"
+                  >
+                    <path
+                      d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"
+                    />
+                    <path d="M16 9a5 5 0 0 1 0 6" />
+                    <path d="M19.364 18.364a9 9 0 0 0 0-12.728" />
+                  </svg>
+                </button>
+
+                <!-- Settings -->
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-settings"
+                >
+                  <path
+                    d="M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915"
+                  />
+                  <circle cx="12" cy="12" r="3" />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-    
+    </section>
 
     <section>
       <div
-        class="bg-[url('/Assets/vector-1.png')] flex flex-col items-center gap-14 text-center flex-col justify-center bg-contain bg-center p-6 h-[400px]"
+        class="bg-[url('/Assets/vector-1.png')] flex flex-col items-center gap-14 text-center flex-col justify-center bg-contain bg-center p-6 h-[400px] max-sm:h-auto"
       >
-        <h3 class="text-[#631dff] text-5xl font-sans font-bold">
+        <h3 class="text-[#631dff] text-5xl max-sm:text-4xl font-sans font-bold">
           ABOUT SOCIAL LALTEN
         </h3>
         <p
@@ -315,7 +315,7 @@
         </p>
       </div>
     </section>
-    <section class="relative w-full h-screen overflow-hidden">
+    <section class="relative w-full min-h-screen overflow-hidden">
       <!-- Poster Fallback -->
       <img
         src="https://sociallalten.in/Assets/webbanner.svg"
@@ -339,7 +339,7 @@
       </video>
     </section>
     <section
-      class="bg-[url('/Assets/whatweDo.png')] bg-cover bg-center h-[600px] p-6 flex flex-col items-center justify-center text-center p-6 gap-10 relative"
+      class="bg-[url('/Assets/whatweDo.png')] bg-cover bg-center  max-sm:h-auto p-6 flex flex-col items-center justify-center max-md:h-auto text-center p-6 gap-10 relative"
     >
       <div class="w-full h-full absolute top-0 left-0 z-20">
         <img
@@ -350,7 +350,9 @@
       </div>
       <h3 class="text-white text-5xl font-sans font-bold z-30">WHAT WE DO</h3>
 
-      <div class="grid lg:grid-cols-2 md:grid-cols-2 max-sm:grid-cols-1  w-full pt-10 xl:grid-cols-4 gap-10">
+      <div
+        class="grid lg:grid-cols-2 md:grid-cols-2 max-sm:grid-cols-1 w-full pt-10 xl:grid-cols-4 gap-10"
+      >
         <div
           class="flex w-full flex-col border-[3px] p-4 border-white rounded-[20px] h-[400px]"
         >
@@ -584,13 +586,15 @@
     </section>
 
     <section
-      class="bg-[url('/Assets/vector-1.png')] bg-cover bg-center pt-20 pb-48 flex flex-col items-center text-center px-6 gap-20 relative"
+      class="bg-[url('/Assets/vector-1.png')] bg-cover bg-center pt-20 pb-48 flex flex-col items-center text-center max-sm:px-0 px-6 gap-20 relative"
     >
       <h3 class="text-[#631dff] text-3xl uppercase font-sans font-bold z-30">
         Built by three . made for many .
       </h3>
 
-      <div class="grid max-sm:grid-cols-1 w-full max-w-[80%] mx-auto pt-10 grid-cols-3 gap-10">
+      <div
+        class="grid max-md:grid-cols-2 max-md:gap-20 max-sm:grid-cols-1 w-full max-w-[80%] max-sm:gap-36 mx-auto pt-10 grid-cols-3 gap-10"
+      >
         <div class="flex w-full flex-col h-[400px]">
           <img
             src="/Assets/team-1.png"
