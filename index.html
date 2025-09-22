@@ -19,7 +19,7 @@
         animation: slide 20s linear infinite;
       }
     </style>
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts -->
@@ -194,11 +194,9 @@
               autoplay
               loop
               playsinline
+              muted
             >
-              <source
-                src="https://sociallalten.in/Assets/Showreel.mp4"
-                type="video/mp4"
-              />
+              <source src="https://sociallalten.in/Assets/Showreel.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
@@ -801,6 +799,7 @@
       // Center play/pause toggle
       centerBtn.addEventListener("click", () => {
         if (video.paused) {
+          video.muted = false; // Unmute on user interaction
           video.play();
           centerBtn.innerHTML = "&#10074;&#10074;";
           centerBtn.classList.add("opacity-0", "pointer-events-none");
