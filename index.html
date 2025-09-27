@@ -51,6 +51,22 @@
     </script>
   </head>
   <body class="font-outfit">
+    <!-- Loader -->
+    <!-- Loader -->
+ <div
+  id="loader"
+  class="fixed inset-0 flex items-center justify-center bg-white z-[9999]"
+>
+  <video
+    src="/Assets/branding-2.mp4"
+    autoplay
+    loop
+    playsinline
+    muted
+    class="w-fit object-center h-auto object-contain"
+  ></video>
+</div>
+
     <nav class="bg-white p-3 w-full z-50">
       <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
@@ -109,7 +125,31 @@
 
         <!-- Mobile Menu Button -->
         <div class="md:hidden">
-          <button id="menu-btn" class="focus:outline-none">
+          <a
+            class="bg-[#631dff] flex items-center font-quiny font-medium text-2xl tracking-[1px] text-[#ff9421] uppercase rounded-full px-4 py-2 hover:bg-[#5220d9] transition"
+            href="https://wa.me/918826759596"
+            target="_blank"
+          >
+            Let's begin
+            <span class="ml-1">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-up-right"
+              >
+                <path d="M7 7h10v10" />
+                <path d="M7 17 17 7" />
+              </svg>
+            </span>
+          </a>
+          <!-- <button id="menu-btn" class="focus:outline-none">
             <svg
               class="w-8 h-8 text-[#631dff]"
               xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +164,7 @@
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
-          </button>
+          </button> -->
         </div>
       </div>
 
@@ -376,38 +416,38 @@
           ABOUT SOCIAL LALTEN
         </h3>
         <p
-          class="text-[#631dff] max-w-5xl mx-auto font-outfit text-center max-md:text-xl text-3xl font-normal"
+          class="text-[#631dff] max-w-4xl mx-auto font-outfit text-center max-md:text-xl text-3xl font-normal"
         >
-          At Social Lalten we breathe life into your brand’s online presence.
-          With a passion for digital marketing and a flair for creativity, we
-          are here to revolutionize the way you connect with your audience in
-          the vast digital landscape.
+          At Social Lalten we breathe life into your brand’s online presence.<br />
+          With a passion for digital marketing and a flair for creativity,<br />
+          we are here to revolutionize the way you connect with<br />
+          your audience in the vast digital landscape.
         </p>
       </div>
     </section>
-<section class="relative w-full lg:h-[1000px] max-md:h-[200px]">
-  <!-- Poster Fallback -->
-  <img
-    src="https://sociallalten.in/Assets/webbanner.svg"
-    alt="poster"
-    class="absolute top-0 left-0 w-full h-full object-contain lg:object-cover object-center"
-  />
+    <section class="relative w-full lg:h-[1000px] max-md:h-[200px]">
+      <!-- Poster Fallback -->
+      <img
+        src="https://sociallalten.in/Assets/webbanner.svg"
+        alt="poster"
+        class="absolute top-0 left-0 w-full h-full object-contain lg:object-cover object-center"
+      />
 
-  <!-- Video -->
-  <video
-    class="absolute top-0 left-0 w-full h-full object-contain lg:object-cover object-center"
-    autoplay
-    muted
-    loop
-    playsinline
-  >
-    <source
-      src="https://sociallalten.in/Assets/webbanner.mp4"
-      type="video/mp4"
-    />
-    Your browser does not support the video tag.
-  </video>
-</section>
+      <!-- Video -->
+      <video
+        class="absolute top-0 left-0 w-full h-full object-contain lg:object-cover object-center"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source
+          src="https://sociallalten.in/Assets/webbanner.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+    </section>
 
     <section
       class="bg-[url('/Assets/whatweDo.png')] bg-cover bg-center max-sm:h-auto p-6 flex flex-col items-center justify-center max-md:h-auto text-center p-6 gap-10 relative"
@@ -434,7 +474,7 @@
         >
           <div class="flex items-center justify-center">
             <h3
-               class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
+              class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
             >
               <span class="text-left">Social Media</span>
               <span class="flex items-center gap-2">
@@ -471,7 +511,7 @@
         >
           <div class="flex items-center justify-center">
             <h3
-               class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
+              class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
             >
               <span class="flex items-center gap-2">
                 ui/ux
@@ -507,7 +547,7 @@
         >
           <div class="flex items-center justify-center">
             <h3
-               class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
+              class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
             >
               <span class="text-left">Branding&</span>
               <span class="flex items-center gap-2">
@@ -543,7 +583,7 @@
         >
           <div class="flex items-center justify-center">
             <h3
-               class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
+              class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
             >
               <span class="text-left">shot and</span>
               <span class="flex items-center gap-2">
@@ -762,48 +802,52 @@
 
     <footer class="w-full">
       <div class="animate-gradient text-white">
-        <div
-          class="container mx-auto w-full max-w-[88%] flex flex-col md:flex-row justify-between items-start md:items-start py-20 px-6 gap-6"
-        >
-          <!-- Email -->
-          <div class="flex flex-col">
-            <span class="font-semibold text-lg">Email</span>
-            <span class="text-base">sociallalten@gmail.com</span>
-          </div>
+        <div class="flex flex-col max-w-[88%] mx-auto gap-4 max-sm:py-8 py-20">
+          <div
+            class="flex max-sm:flex-col max-sm:gap-6 justify-between items-start"
+          >
+            <!-- Email -->
+            <div class="flex flex-col">
+              <span class="font-semibold text-lg">Email</span>
+              <span class="text-base">sociallalten@gmail.com</span>
+            </div>
 
-          <!-- Phone -->
-          <div class="flex flex-col">
-            <span class="font-semibold text-lg">Phone No</span>
-            <span class="text-base">+91 8826759596</span>
-            <div class="flex gap-3 mt-4">
-              <a href="#"
-                ><img
-                  src="https://sociallalten.in/images/insta.png"
-                  alt="Instagram"
-                  class="w-8 h-8"
-              /></a>
-              <a href="#"
-                ><img
-                  src="https://sociallalten.in/images/linked.png"
-                  alt="LinkedIn"
-                  class="w-8 h-8"
-              /></a>
-              <a href="#"
-                ><img
-                  src="https://sociallalten.in/images/facebook.png"
-                  alt="Facebook"
-                  class="w-8 h-8"
-              /></a>
+            <!-- Phone -->
+            <div class="flex flex-col">
+              <span class="font-semibold text-lg">Phone No</span>
+              <span class="text-base">+91 8826759596</span>
+            </div>
+
+            <!-- Address -->
+            <div class="flex flex-col">
+              <span class="font-semibold text-lg">Address</span>
+              <span class="text-base">
+                E49/5, Pocket D, Okhla Phase II,<br />
+                Okhla Industrial Estate, New Delhi 110020
+              </span>
             </div>
           </div>
-
-          <!-- Address -->
-          <div class="flex flex-col">
-            <span class="font-semibold text-lg">Address</span>
-            <span class="text-base">
-              E49/5, Pocket D, Okhla Phase II, Okhla Industrial Estate, New
-              Delhi 110020
-            </span>
+          <div
+            class="flex w-full items-center max-sm:mt-4 justify-center gap-3"
+          >
+            <a href="#"
+              ><img
+                src="https://sociallalten.in/images/insta.png"
+                alt="Instagram"
+                class="w-8 h-8"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://sociallalten.in/images/linked.png"
+                alt="LinkedIn"
+                class="w-8 h-8"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://sociallalten.in/images/facebook.png"
+                alt="Facebook"
+                class="w-8 h-8"
+            /></a>
           </div>
         </div>
 
