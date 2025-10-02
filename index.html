@@ -879,7 +879,7 @@
     </script>
     <script>
       const video = document.getElementById("videoPlayer");
-      const centerBtn = document.getElementById("centerPlayPauseBtn");
+      // const centerBtn = document.getElementById("centerPlayPauseBtn");
       const muteBtn = document.getElementById("muteBtn");
       const seekBar = document.getElementById("seekBar");
       const volumeBar = document.getElementById("volumeBar");
@@ -888,21 +888,21 @@
       window.addEventListener("load", () => {
         video.muted = true; // Muted initially to allow autoplay
         video.play();
-        centerBtn.classList.add("opacity-0", "pointer-events-none");
+        // centerBtn.classList.add("opacity-0", "pointer-events-none");
       });
 
       // Center play/pause toggle
-      centerBtn.addEventListener("click", () => {
-        if (video.paused) {
-          video.muted = false; // Unmute on user interaction
-          video.play();
-          centerBtn.innerHTML = "&#10074;&#10074;"; // Pause icon
-          centerBtn.classList.add("opacity-0", "pointer-events-none");
-        } else {
-          video.pause();
-          centerBtn.innerHTML = "&#9658;"; // Play icon
-        }
-      });
+      // centerBtn.addEventListener("click", () => {
+      //   if (video.paused) {
+      //     video.muted = false; // Unmute on user interaction
+      //     video.play();
+      //     centerBtn.innerHTML = "&#10074;&#10074;"; // Pause icon
+      //     centerBtn.classList.add("opacity-0", "pointer-events-none");
+      //   } else {
+      //     video.pause();
+      //     centerBtn.innerHTML = "&#9658;"; // Play icon
+      //   }
+      // });
 
       // Show play button when video is paused
       video.addEventListener("pause", () => {
