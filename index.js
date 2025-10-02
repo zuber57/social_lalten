@@ -1,15 +1,17 @@
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
+
+  
   setTimeout(() => {
-      loader.style.display = "flex";
-      if (loader) {
-        loader.classList.add("fade-out");
-        loader.addEventListener("animationend", () => {
-          loader.style.display = "none";
-        });
-      }
-    }, 1000); 
-  });
+    if (loader) {
+      loader.classList.add("fade-out");
+      loader.addEventListener("animationend", () => {
+        loader.style.display = "none"; 
+      });
+    }
+  }, 500); 
+});
+
 
 const menuBtn = document.getElementById("menu-btn");
 const mobileMenu = document.getElementById("mobile-menu");
