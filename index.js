@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
           loader.style.display = "none";
         });
       }
-    }, 2000); // Show loader for 2 seconds
+    }, 1000); // Show loader for 2 seconds
   });
 
 const menuBtn = document.getElementById("menu-btn");
