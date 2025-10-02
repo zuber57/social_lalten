@@ -870,16 +870,16 @@
         });
       });
     </script>
-  <script>
+<script>
   const video = document.getElementById("videoPlayer");
   const centerBtn = document.getElementById("centerPlayPauseBtn");
   const muteBtn = document.getElementById("muteBtn");
   const seekBar = document.getElementById("seekBar");
   const volumeBar = document.getElementById("volumeBar");
 
-  // Autoplay on load
+  // Autoplay on load with muted video
   window.addEventListener("load", () => {
-    video.muted = true;  // Mute video to allow autoplay
+    video.muted = true;  // Muted initially to allow autoplay
     video.play();
     centerBtn.classList.add("opacity-0", "pointer-events-none");
   });
@@ -887,7 +887,7 @@
   // Center play/pause toggle
   centerBtn.addEventListener("click", () => {
     if (video.paused) {
-      video.muted = false; // Unmute on user interaction
+      video.muted = false;  // Unmute on user interaction
       video.play();
       centerBtn.innerHTML = "&#10074;&#10074;";  // Pause icon
       centerBtn.classList.add("opacity-0", "pointer-events-none");
@@ -939,6 +939,7 @@
     video.volume = volumeBar.value;
   });
 </script>
+
 
 
     <script src="index.js"></script>
