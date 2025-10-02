@@ -1,6 +1,7 @@
 window.addEventListener("load", () => {
-    setTimeout(() => {
-      const loader = document.getElementById("loader");
+  const loader = document.getElementById("loader");
+  setTimeout(() => {
+      loader.style.display = "flex";
       if (loader) {
         loader.classList.add("fade-out");
         loader.addEventListener("animationend", () => {
