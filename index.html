@@ -274,12 +274,12 @@
             </video>
 
             <!-- Center Play/Pause Button -->
-            <button
+            <!-- <button
               id="centerPlayPauseBtn"
               class="absolute inset-0 flex items-center justify-center text-purple-700 text-4xl md:text-6xl bg-black/30 hover:bg-black/40 transition duration-300"
             >
               &#10074;&#10074;
-            </button>
+            </button> -->
 
             <!-- Bottom Control Bar -->
             <div
@@ -884,27 +884,27 @@
       // });
 
       // Center play/pause toggle
-      centerBtn.addEventListener("click", () => {
-        if (video.paused) {
-          video.muted = false; // Unmute on user interaction
-          video.play();
-          centerBtn.innerHTML = "&#10074;&#10074;";
-          centerBtn.classList.add("opacity-0", "pointer-events-none");
-        } else {
-          video.pause();
-          centerBtn.innerHTML = "&#9658;";
-        }
-      });
+      // centerBtn.addEventListener("click", () => {
+      //   if (video.paused) {
+      //     video.muted = false; // Unmute on user interaction
+      //     video.play();
+      //     centerBtn.innerHTML = "&#10074;&#10074;";
+      //     centerBtn.classList.add("opacity-0", "pointer-events-none");
+      //   } else {
+      //     video.pause();
+      //     centerBtn.innerHTML = "&#9658;";
+      //   }
+      // });
 
       // Show play button when video is paused
-      video.addEventListener("pause", () => {
-        centerBtn.classList.remove("opacity-0", "pointer-events-none");
-      });
+      // video.addEventListener("pause", () => {
+      //   centerBtn.classList.remove("opacity-0", "pointer-events-none");
+      // });
 
       // Hide button again on play
-      video.addEventListener("play", () => {
-        centerBtn.classList.add("opacity-0", "pointer-events-none");
-      });
+      // video.addEventListener("play", () => {
+      //   centerBtn.classList.add("opacity-0", "pointer-events-none");
+      // });
 
       // Sync seek bar
       video.addEventListener("timeupdate", () => {
