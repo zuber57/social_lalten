@@ -274,12 +274,12 @@
             </video>
 
             <!-- Center Play/Pause Button -->
-            <!-- <button
+            <button
               id="centerPlayPauseBtn"
               class="absolute inset-0 flex items-center justify-center text-purple-700 text-4xl md:text-6xl bg-black/30 hover:bg-black/40 transition duration-300"
             >
               &#10074;&#10074;
-            </button> -->
+            </button>
 
             <!-- Bottom Control Bar -->
             <div
@@ -870,75 +870,76 @@
         });
       });
     </script>
-    <script>
-      const video = document.getElementById("videoPlayer");
-      const centerBtn = document.getElementById("centerPlayPauseBtn");
-      const muteBtn = document.getElementById("muteBtn");
-      const seekBar = document.getElementById("seekBar");
-      const volumeBar = document.getElementById("volumeBar");
+  <script>
+  const video = document.getElementById("videoPlayer");
+  const centerBtn = document.getElementById("centerPlayPauseBtn");
+  const muteBtn = document.getElementById("muteBtn");
+  const seekBar = document.getElementById("seekBar");
+  const volumeBar = document.getElementById("volumeBar");
 
-      // Autoplay on load
-      // window.addEventListener("load", () => {
-      //   video.play();
-      //   centerBtn.classList.add("opacity-0", "pointer-events-none");
-      // });
+  // Autoplay on load
+  window.addEventListener("load", () => {
+    video.muted = true;  // Mute video to allow autoplay
+    video.play();
+    centerBtn.classList.add("opacity-0", "pointer-events-none");
+  });
 
-      // Center play/pause toggle
-      // centerBtn.addEventListener("click", () => {
-      //   if (video.paused) {
-      //     video.muted = false; // Unmute on user interaction
-      //     video.play();
-      //     centerBtn.innerHTML = "&#10074;&#10074;";
-      //     centerBtn.classList.add("opacity-0", "pointer-events-none");
-      //   } else {
-      //     video.pause();
-      //     centerBtn.innerHTML = "&#9658;";
-      //   }
-      // });
+  // Center play/pause toggle
+  centerBtn.addEventListener("click", () => {
+    if (video.paused) {
+      video.muted = false; // Unmute on user interaction
+      video.play();
+      centerBtn.innerHTML = "&#10074;&#10074;";  // Pause icon
+      centerBtn.classList.add("opacity-0", "pointer-events-none");
+    } else {
+      video.pause();
+      centerBtn.innerHTML = "&#9658;";  // Play icon
+    }
+  });
 
-      // Show play button when video is paused
-      // video.addEventListener("pause", () => {
-      //   centerBtn.classList.remove("opacity-0", "pointer-events-none");
-      // });
+  // Show play button when video is paused
+  video.addEventListener("pause", () => {
+    centerBtn.classList.remove("opacity-0", "pointer-events-none");
+  });
 
-      // Hide button again on play
-      // video.addEventListener("play", () => {
-      //   centerBtn.classList.add("opacity-0", "pointer-events-none");
-      // });
+  // Hide button again on play
+  video.addEventListener("play", () => {
+    centerBtn.classList.add("opacity-0", "pointer-events-none");
+  });
 
-      // Sync seek bar
-      video.addEventListener("timeupdate", () => {
-        seekBar.value = (100 / video.duration) * video.currentTime;
-      });
+  // Sync seek bar
+  video.addEventListener("timeupdate", () => {
+    seekBar.value = (100 / video.duration) * video.currentTime;
+  });
 
-      // Seek manually
-      // seekBar.addEventListener("input", () => {
-      //   video.currentTime = video.duration * (seekBar.value / 100);
-      // });
+  // Seek manually
+  seekBar.addEventListener("input", () => {
+    video.currentTime = video.duration * (seekBar.value / 100);
+  });
 
-      // Mute toggle
+  // Mute toggle
+  muteBtn.addEventListener("click", () => {
+    video.muted = !video.muted;
 
-muteBtn.addEventListener("click", () => {
-  video.muted = !video.muted;
+    muteBtn.innerHTML = video.muted
+      ? `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-x">
+          <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/>
+          <line x1="22" y1="9" x2="16" y2="15"/>
+          <line x1="16" y1="9" x2="22" y2="15"/>
+        </svg>`
+      : `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2">
+          <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/>
+          <path d="M16 9a5 5 0 0 1 0 6"/>
+          <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/>
+        </svg>`;
+  });
 
-  muteBtn.innerHTML = video.muted 
-    ? `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-x">
-        <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/>
-        <line x1="22" y1="9" x2="16" y2="15"/>
-        <line x1="16" y1="9" x2="22" y2="15"/>
-      </svg>`
-    : `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-volume-2">
-        <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/>
-        <path d="M16 9a5 5 0 0 1 0 6"/>
-        <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/>
-      </svg>`;
-});
+  // Volume slider
+  volumeBar.addEventListener("input", () => {
+    video.volume = volumeBar.value;
+  });
+</script>
 
-      // Volume slider
-      // volumeBar.addEventListener("input", () => {
-      //   video.volume = volumeBar.value;
-      // });
-    </script>
 
     <script src="index.js"></script>
   </body>
