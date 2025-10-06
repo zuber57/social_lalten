@@ -73,7 +73,9 @@
       />
     </div>
 
-    <nav class="bg-white p-3 w-full z-50 py-4 border-b border-solid  transition-all duration-500 ease-in-out">
+    <nav
+      class="bg-white p-3 w-full z-50 py-4 border-b border-solid transition-all duration-500 ease-in-out"
+    >
       <div class="container mx-auto flex justify-between items-center">
         <!-- Logo -->
         <div>
@@ -89,9 +91,7 @@
           <a href="/" class="text-[#631dff] font-bold hover:text-[#ff9421]"
             >Home</a
           >
-          <a
-            href="#about"
-            class="text-[#631dff] font-bold hover:text-[#ff9421]"
+          <a href="#about" class="text-[#631dff] font-bold hover:text-[#ff9421]"
             >About us</a
           >
           <a
@@ -104,7 +104,7 @@
         <!-- CTA Button -->
         <div class="hidden md:block">
           <a
-            class="bg-[#631dff] flex items-center  font-bold text-2xl tracking-[1px] text-[#ff9421] uppercase rounded-full px-4 py-2 hover:bg-[#5220d9] transition"
+            class="bg-[#631dff] flex items-center font-bold text-2xl tracking-[1px] text-[#ff9421] uppercase rounded-full px-4 py-2 hover:bg-[#5220d9] transition"
             href="https://wa.me/918826759596"
             target="_blank"
           >
@@ -252,15 +252,11 @@
     <section
       class="relative flex items-center justify-center w-full min-h-auto bg-[url('https://sociallalten.in/Assets/herosection-bg.png')] bg-cover bg-center z-10"
     >
-      <div
-        class="relative w-full h-full  flex items-center justify-center"
-      >
+      <div class="relative w-full h-full flex items-center justify-center">
         <!-- Wrapper -->
-        <div class="relative z-30 w-full ">
+        <div class="relative z-30 w-full">
           <!-- Video Player Container -->
-          <div
-            class="relative w-full border-1  overflow-hidden bg-gray-100"
-          >
+          <div class="relative w-full border-1 overflow-hidden bg-gray-100">
             <!-- Video Element -->
             <video
               id="videoPlayer"
@@ -268,7 +264,8 @@
               autoplay
               loop
               playsinline
-            >
+              muted
+              >
               <source
                 src="https://sociallalten.in/Assets/Showreel.mp4"
                 type="video/mp4"
@@ -286,9 +283,9 @@
 
             <!-- Bottom Control Bar -->
             <div
-              class="absolute bottom-0 w-full bg-[#FF9522] text-purple-900 flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 px-2 sm:px-4 py-2 sm:py-3"
+              class="absolute bottom-0 w-full bg-[#FF9522] text-[#631dff] flex flex-col sm:flex-row items-center justify-between gap-2 sm:gap-4 px-2 sm:px-4 py-2 sm:py-3"
             >
-              <div class="w-full flex items-center gap-3 sm:gap-6">
+              <div class="w-full md:w-[90%] mx-auto py-1 md:py-4 flex items-center gap-3 sm:gap-6">
                 <!-- Play / Skip Controls -->
                 <div class="flex items-center gap-4 sm:gap-6">
                   <!-- Play -->
@@ -300,8 +297,6 @@
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
                     class="lucide lucide-play"
                   >
                     <path
@@ -318,8 +313,7 @@
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                   
                     class="lucide lucide-skip-back"
                   >
                     <path
@@ -337,8 +331,7 @@
                     fill="none"
                     stroke="currentColor"
                     stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                   
                     class="lucide lucide-skip-forward"
                   >
                     <path d="M21 4v16" />
@@ -353,11 +346,11 @@
                   id="seekBar"
                   type="range"
                   value="45"
-                  class="w-full h-1 accent-purple-700 pointer-events-none"
+                  class="w-full h-[3px] accent-[#631dff] mx-[4%] pointer-events-none"
                 />
 
                 <!-- Mute Button -->
-                <button id="muteBtn" class="text-purple-700">
+                <button id="muteBtn" class="text-[#631dff]">
                   <!-- Volume On Icon (Initially) -->
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -406,17 +399,17 @@
       </div>
     </section>
 
-    <section id="about" >
+    <section id="about">
       <div
-        class="bg-[url('https://sociallalten.in/Assets/BG.png')] pt-12 flex flex-col items-center gap-14 text-center flex-col justify-center bg-contain bg-center p-6 h-[400px] max-sm:h-auto"
+        class="bg-[url('https://sociallalten.in/Assets/BG.png')] pt-10 md:pt-[90px] flex flex-col items-center gap-6 md:gap-14 text-center flex-col justify-center bg-contain bg-center p-6 h-[400px] max-sm:h-auto"
       >
         <h3
-          class="text-[#631dff] text-[74px] leading-[10px] tracking-[1px] mt-12 font-quiny max-sm:text-4xl quiny font-medium"
+          class="text-[#631dff] text-[74px] leading-[10px] tracking-[1px] mt-4 md:mt-12 font-quiny max-sm:text-4xl quiny font-medium"
         >
           ABOUT SOCIAL LALTEN
         </h3>
         <p
-          class="text-[#631dff]  uppercase leading-10  max-w-full mt-6 mx-auto font-outfit text-center max-md:text-xl text-3xl font-normal"
+          class="text-[#631dff] uppercase leading-40 max-w-full  mt-2 md:mt-10 mx-auto font-outfit text-center text-lg md:text-3xl  font-normal"
         >
           At Social Lalten we breathe life into your brand’s online presence.<br />
           With a passion for digital marketing and a flair for creativity,<br />
@@ -450,31 +443,31 @@
     </section>
 
     <section
-      class="bg-[url('https://sociallalten.in/Assets/whatweDo.png')] bg-cover bg-center max-sm:h-auto p-6 flex flex-col items-center justify-center max-md:h-auto text-center p-6 gap-10 relative"
+      class="bg-[url('https://sociallalten.in/Assets/whatweDo.png')] bg-contain md:bg-cover bg-center max-sm:h-auto p-6 flex flex-col items-center justify-center max-md:h-auto text-center pt-[40px] md:pt-[90px] gap-10 relative"
       id="Whatwedo"
     >
-      <div class="w-full h-full absolute top-0 left-0 z-20">
+      <!-- <div class="w-full h-full absolute top-0 left-0 z-20">
         <img
           src="https://sociallalten.in/Assets/vector3.svg"
           alt="overlay"
           class="w-full h-full object-cover object-center"
-        />
+        /> -->
       </div>
       <h3
-        class="text-white text-[74px] leading-[20px] tracking-[1px] max-sm:text-4xl font-quiny font-medium z-30"
+        class="text-white  text-[74px] leading-[20px] tracking-[1px] max-sm:text-4xl font-quiny font-medium z-30"
       >
         WHAT WE DO
       </h3>
 
       <div
-        class="grid lg:grid-cols-2 md:grid-cols-2 max-sm:grid-cols-1 w-full pt-10 xl:grid-cols-4 gap-10"
+        class="grid lg:grid-cols-2 md:grid-cols-2 max-sm:grid-cols-1 w-full pt-4 md:pt-10 xl:grid-cols-4 gap-10 md:gap-[100px] px-5 md:px-[40px]  pb-10 md:pb-20"
       >
         <div
           class="flex w-full flex-col border-[3px] border-white rounded-[20px] h-auto"
         >
           <div class="flex items-center justify-center">
             <h3
-              class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
+              class="text-[28px] md:text-[40px] py-3 pt-8 font-quiny leading-[20px] md:leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
             >
               <span class="text-left">Social Media</span>
               <span class="flex items-center gap-2">
@@ -499,9 +492,11 @@
           <!-- <video class="w-full rounded-b-2xl" autoplay muted loop playsinline>
             <source src="/Assets/branding-3.mp4" type="video/mp4" />
           </video> -->
+          <div class="p-4">
           <img
             src="https://sociallalten.in/Assets/SocialMediaManagement2.gif"
           />
+          </div>
         </div>
 
         <div
@@ -509,7 +504,7 @@
         >
           <div class="flex items-center justify-center">
             <h3
-              class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
+              class="text-[28px] md:text-[40px] py-3 pt-8 font-quiny leading-[20px] md:leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
             >
               <span class="flex items-center gap-2">
                 ui/ux
@@ -531,14 +526,16 @@
               <span class="text-left">development</span>
             </h3>
           </div>
+          <div class="p-4">
           <img src="https://sociallalten.in/Assets/Ui.Ux_2.gif" />
+          </div>
         </div>
         <div
           class="flex w-full flex-col border-[3px] border-white rounded-[20px] h-auto"
         >
           <div class="flex items-center justify-center">
             <h3
-              class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
+              class="text-[28px] md:text-[40px] py-3 pt-8 font-quiny leading-[20px] md:leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
             >
               <span class="text-left">Branding&</span>
               <span class="flex items-center gap-2">
@@ -560,14 +557,16 @@
               </span>
             </h3>
           </div>
+          <div class="p-4">
           <img src="https://sociallalten.in/Assets/Branding_icon.gif" />
+          </div>
         </div>
         <div
           class="flex w-full flex-col border-[3px] border-white rounded-[20px] h-auto"
         >
           <div class="flex items-center justify-center">
             <h3
-              class="text-4xl py-3 font-quiny leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
+              class="text-[28px] md:text-[40px] py-3 pt-8 font-quiny leading-[20px] md:leading-[2rem] tracking-[1px] text-white uppercase flex flex-col justify-center"
             >
               <span class="text-left">shot and</span>
               <span class="flex items-center gap-2">
@@ -589,7 +588,9 @@
               </span>
             </h3>
           </div>
+          <div class="p-4">
           <img src="https://sociallalten.in/Assets/Shoot_and_film_icon.gif" />
+          </div>
         </div>
       </div>
     </section>
@@ -658,9 +659,9 @@
     <section class="py-12">
       <div class="w-full flex flex-col">
         <!-- Section Title -->
-        <div class="flex items-center justify-center gap-4 mb-8">
+        <div class="flex items-center justify-center gap-4  mb-10 md:mb-20">
           <h3
-            class="font-quiny text-[74px] text-[#631dff] max-sm:text-3xl uppercase font-medium tracking-[1px] text-center"
+            class="font-quiny text-[74px] text-[#631dff] max-sm:text-4xl uppercase font-medium   text-center"
           >
             Follow us
           </h3>
@@ -713,10 +714,10 @@
     </section>
 
     <section
-      class="bg-[url('https://sociallalten.in/Assets/vector-1.png')] bg-cover bg-center pt-20 pb-48 flex flex-col items-center text-center max-sm:px-0 px-6 gap-20 relative"
+      class="bg-[url('https://sociallalten.in/Assets/vector-1.png')] bg-contain md:bg-cover bg-center  pt-10 md:pt-20 pb-36 md:pb-48 flex flex-col items-center text-center max-sm:px-0 px-6 gap-5 md:gap-20 relative"
     >
       <h3
-        class="text-[#631dff] font-quiny font-medium tracking-[1px] max-sm:text-3xl max-w-xl md:max-w-full text-[74px] uppercase z-30"
+        class="text-[#631dff] font-quiny font-medium  max-sm:text-4xl max-w-lg mx-auto md:max-w-full text-[74px] uppercase z-30   md:whitespace-nowrap text-center"
       >
         Built by three . made for many .
       </h3>
@@ -785,14 +786,14 @@
           >
             <!-- Email -->
             <div class="flex flex-col">
-              <span class="font-semibold text-lg">Email</span>
-              <span class="text-base">sociallalten@gmail.com</span>
+              <span class="font-semibold text-2xl md:text-3xl">Email</span>
+              <span class="text-xl md:text-2xl mt-2">sociallalten@gmail.com</span>
             </div>
 
             <!-- Phone -->
             <div class="flex flex-col">
-              <span class="font-semibold text-lg">Phone No</span>
-              <span class="text-base">+91 8826759596</span>
+              <span class="font-semibold text-2xl md:text-3xl">Phone No</span>
+              <span class="text-xl md:text-2xl mt-2">+91 8826759596</span>
               <div
                 class="flex w-full items-center max-sm:mt-4 justify-center gap-3 mt-4"
               >
@@ -800,27 +801,27 @@
                   ><img
                     src="https://sociallalten.in/images/insta.png"
                     alt="Instagram"
-                    class="w-8 h-8"
+                    class="w-10 h-10"
                 /></a>
                 <a href="#"
                   ><img
                     src="https://sociallalten.in/images/linked.png"
                     alt="LinkedIn"
-                    class="w-8 h-8"
+                    class="w-10 h-10"
                 /></a>
                 <a href="#"
                   ><img
                     src="https://sociallalten.in/images/facebook.png"
                     alt="Facebook"
-                    class="w-8 h-8"
+                    class="w-10 h-10"
                 /></a>
               </div>
             </div>
 
             <!-- Address -->
             <div class="flex flex-col">
-              <span class="font-semibold text-lg">Address</span>
-              <span class="text-base">
+              <span class="font-semibold text-2xl md:text-3xl">Address</span>
+              <span class="text-xl md:text-2xl mt-2">
                 E49/5, Pocket D, Okhla Phase II,<br />
                 Okhla Industrial Estate, New Delhi 110020
               </span>
@@ -829,7 +830,7 @@
         </div>
 
         <!-- Bottom copyright bar -->
-        <div class="bg-[#3b0fa3] text-white text-center py-3 text-sm">
+        <div class="bg-[#3b0fa3] text-white text-center py-3 text-xl">
           © 2025 SocialLalten.com | All Rights Reserved
         </div>
       </div>
@@ -879,50 +880,22 @@
     </script>
     <script>
       const video = document.getElementById("videoPlayer");
-      // const centerBtn = document.getElementById("centerPlayPauseBtn");
       const muteBtn = document.getElementById("muteBtn");
       const seekBar = document.getElementById("seekBar");
       const volumeBar = document.getElementById("volumeBar");
+      window.onload = function() {
+        var video = document.getElementById('videoPlayer');
+        video.play(); // Explicitly start the video
+        
+        // Ensure sound is enabled
+        video.muted = false;
+    }
 
       // Autoplay on load with muted video
       window.addEventListener("load", () => {
         video.muted = true; // Muted initially to allow autoplay
         video.play();
-        // centerBtn.classList.add("opacity-0", "pointer-events-none");
       });
-
-      // Center play/pause toggle
-      // centerBtn.addEventListener("click", () => {
-      //   if (video.paused) {
-      //     video.muted = false; // Unmute on user interaction
-      //     video.play();
-      //     centerBtn.innerHTML = "&#10074;&#10074;"; // Pause icon
-      //     centerBtn.classList.add("opacity-0", "pointer-events-none");
-      //   } else {
-      //     video.pause();
-      //     centerBtn.innerHTML = "&#9658;"; // Play icon
-      //   }
-      // });
-
-      // Show play button when video is paused
-      video.addEventListener("pause", () => {
-        centerBtn.classList.remove("opacity-0", "pointer-events-none");
-      });
-
-      // Hide button again on play
-      video.addEventListener("play", () => {
-        centerBtn.classList.add("opacity-0", "pointer-events-none");
-      });
-
-      // Sync seek bar
-      // video.addEventListener("timeupdate", () => {
-      //   seekBar.value = (100 / video.duration) * video.currentTime;
-      // });
-
-      // Seek manually
-      // seekBar.addEventListener("input", () => {
-      //   video.currentTime = video.duration * (seekBar.value / 100);
-      // });
 
       // Mute toggle
       muteBtn.addEventListener("click", () => {
@@ -944,6 +917,16 @@
       // Volume slider
       volumeBar.addEventListener("input", () => {
         video.volume = volumeBar.value;
+      });
+
+      // Sync seek bar with video
+      video.addEventListener("timeupdate", () => {
+        seekBar.value = (video.currentTime / video.duration) * 100;
+      });
+
+      // Seek manually
+      seekBar.addEventListener("input", () => {
+        video.currentTime = (seekBar.value / 100) * video.duration;
       });
     </script>
 
